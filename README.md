@@ -1,86 +1,39 @@
-🐄 Pipeline de Dados – iRancho
+<h1>🐄 Pipeline de Dados – iRancho</h1>
 
-Pipeline completo de ingestão, tratamento e disponibilização de dados do sistema iRancho, plataforma utilizada para armazenamento e gerenciamento de informações relacionadas ao controle de gado em fazendas.
+<p>
+Pipeline completo de ingestão, tratamento e disponibilização de dados do sistema <strong>iRancho</strong>, 
+plataforma utilizada para armazenamento e gerenciamento de informações relacionadas ao controle de gado em fazendas.
+</p>
 
-📌 Sobre o Projeto
+<h2>📌 Sobre o Projeto</h2>
 
-Este repositório contém o desenvolvimento de um pipeline de dados end-to-end, responsável por:
+<p>Este repositório contém o desenvolvimento de um pipeline de dados end-to-end, responsável por:</p>
 
-🔄 Extração de dados da API do iRancho
+<ul>
+  <li>🔄 <strong>Extração de dados</strong> da API do iRancho</li>
+  <li>🟫 <strong>Criação e armazenamento</strong> de dados brutos na camada Bronze</li>
+  <li>⚙️ <strong>Normalização, padronização e tratamento</strong> de dados na camada Silver</li>
+  <li>🟨 <strong>Tratativas finais, enriquecimento e modelagem analítica</strong> para a camada Gold</li>
+  <li>📊 <strong>Disponibilização dos dados tratados</strong> para construção de dashboards e análises</li>
+</ul>
 
-🟫 Criação e armazenamento de dados brutos na camada Bronze
+<p>
+O objetivo final é criar uma estrutura robusta e escalável que permita análises consistentes para apoiar a 
+tomada de decisão no contexto de gestão pecuária.
+</p>
 
-⚙️ Normalização, padronização e tratamento de dados na camada Silver
+<h2>👑 O que é o iRancho?</h2>
 
-🟨 Tratativas finais, enriquecimento e modelagem analítica para a camada Gold
+<p>
+O <strong>iRancho</strong> é um sistema voltado para gestão de fazendas, oferecendo controle detalhado de:
+</p>
 
-📊 Disponibilização dos dados tratados para construção de dashboards e análises
+<ul>
+  <li>Animais</li>
+  <li>Lotes</li>
+  <li>Reprodução</li>
+  <li>Saúde</li>
+  <li>Alimentação</li>
+  <li>Manejos gerais</li>
+</ul>
 
-O objetivo final é criar uma estrutura robusta e escalável que permita análises consistentes para apoiar a tomada de decisão no contexto de gestão pecuária.
-
-🐮 O que é o iRancho?
-
-O iRancho é um sistema voltado para gestão de fazendas, oferecendo controle detalhado de:
-
-Animais
-
-Lotes
-
-Reprodução
-
-Saúde
-
-Alimentação
-
-Manejos gerais
-
-Ele disponibiliza esses dados via API, permitindo integração com soluções de BI e engenharia de dados.
-
-🏗️ Arquitetura do Pipeline
-1️⃣ Bronze – Dados Brutos
-
-Armazenamento direto dos dados extraídos da API
-
-Nenhuma transformação é aplicada
-
-Mantém histórico e estrutura original
-
-2️⃣ Silver – Dados Tratados
-
-Padronização de colunas
-
-Conversão de tipos
-
-Tratamento de nulos
-
-Normalização de estruturas aninhadas
-
-Aplicação das primeiras regras de negócio
-
-3️⃣ Gold – Dados Analíticos
-
-Modelagem focada em consumo analítico
-
-Tabelas agregadas
-
-Indicadores transformados
-
-Base final utilizada por ferramentas de BI
-
-⚙️ Tecnologias Utilizadas (exemplo)
-
-Python
-
-Airflow / Prefect / Dagster
-
-Databricks / Spark
-
-Azure / AWS / GCP
-
-Power BI / Tableau / Looker
-
-(Ajuste de acordo com sua stack.)
-
-📈 Objetivo Geral
-
-Fornecer um pipeline escalável e confiável para transformar dados do iRancho em insights acionáveis, permitindo a criação de dashboards eficientes e análises aprofundadas para a gestão pecuária.
