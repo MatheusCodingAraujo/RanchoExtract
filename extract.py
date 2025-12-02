@@ -1,13 +1,10 @@
 import requests
 import pandas as pd
-from sqlalchemy import create_engine
 
 headers = {
     'accept': 'application/json',
-    'x-access-token-ws': '7cfebf5c04be9a9c0df5a8d7d4a407356199eb29007d1af24d77125857444754'
+    'x-access-token-ws': 'd1bf4238656c2167c5997e4081b549eedd0a25622a18740d8ad1a8a31ee22b15'
 }
-
-engine = create_engine('sqlite:///meubanco.db')
 
 # --------------------- FAZENDA --------------------------------------#
 url = 'https://api.irancho.com.br/api/fazenda'
@@ -31,7 +28,3 @@ for animal in animal_list:
 df_animal = pd.json_normalize(animal_list)
 df_animal = df_animal.filter(items=['id_animal', 'id_animal_fazenda',
                              'idade_meses', 'no_categoria_animal', 'no_sexo', 'peso', 'id_fazenda'])
-
-# ----------------------- DF PARA SQLITE------------------------------#
-df_fazenda.to_sql('Fazenda', con=engine, if_exists='replace', index=False)
-df_animal.to_sql('Animal', con=engine, if_exists='replace', index=False)
